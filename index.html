@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Quiz Application</title>
-  </head>
 
-  <!--
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Quiz Application</title>
+</head>
+
+<!--
 AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
@@ -25,26 +26,28 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 -->
-  <body>
-    <header>
-      <h1>CODE QUIZ COUNTDOWN</h1>
-    </header>
-    <p id="clock"></p>
-    <section id="container" class="hide">
-      <div id="questionsMain">
-        <div id="question">Which is an example of a method?</div>
-        <div id="answerButt" class="btnGrid">
-          <!-- <button class="butt">google.com</button>
-          <button class="butt" id="rightAnswer">.getElementById</button>
-          <button class="butt" id="wrongAnswer">lol</button>
-          <button class="butt">console.</button> -->
-        </div>
-      </div>
-    </section>
-    <div class="controls">
-      <button id="startButtMain" class="startButt">START</button>
-    </div>
 
-    <script src="./scripts.js"></script>
-  </body>
+<body>
+  <header>
+    <h1>CODE QUIZ COUNTDOWN</h1>
+  </header>
+  <p id="clock"></p>
+  <input id="initials" value="" name=initials class="initials"/>
+  <section id="container" class="hide">
+    <div id="questionsMain">
+      <div id="question">Which is an example of a method?</div>
+      <button id="answerButt" class="btnGrid"> AnswerA</button>
+      <button id="answerButtB" class="btnGrid"> AnswerB</button>
+      <button id="answerButtC" class="btnGrid"> AnswerC</button>
+      <button id="answerButtD" class="btnGrid"> AnswerD</button>
+    </div>
+    </div>
+  </section>
+  <div class="controls">
+    <button id="startButtMain" class="startButt">START</button>
+  </div>
+
+  <script src="./scripts.js"></script>
+</body>
+
 </html>
