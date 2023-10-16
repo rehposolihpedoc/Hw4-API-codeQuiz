@@ -3,11 +3,7 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 ```
 ## Acceptance Criteria
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
+
 WHEN I answer a question incorrectly
 THEN time is subtracted from the clock
 WHEN all questions are answered or the timer reaches 0
@@ -15,7 +11,6 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 */
-//numbers, boolean, string, array, object
 
 const startButton = document.getElementById('startButtMain') // connecting button to event listener
 startButton.addEventListener('click', startTheGame) 
@@ -32,7 +27,8 @@ startButton.addEventListener('click', startTheGame)
         }, 1000);
     }
 
- function startTheGame() {
+ // function for initiating the game
+    function startTheGame() {
     startButton.classList.add('hide') // make start button dissaprear
      startTimerCountdown();// Event Listener to Start game
      // get container by ID and remove class hide
@@ -41,7 +37,7 @@ startButton.addEventListener('click', startTheGame)
 }   
 
 
-
+// array for question objects
 var arrOfQuestions = [
     {
         prompt: "What is JavaScript?",
@@ -83,7 +79,7 @@ var ans1d = document.getElementById('answerButtD')
 answerButtB.addEventListener('click', function() {
                             if (question1() == 'answerButtB') {
   return question2();
-} else { return question2();  }
+} else if (question1() !== 'answerButtB') { return question2();  }
 } );
   
  
@@ -104,10 +100,9 @@ var ans1d = document.getElementById('answerButtD')
 answerButt.addEventListener('click', function() {
                             if (question2() == 'answerButtD') {
   return question3();
-} else { return question3();  }
+} else if (question2() !== 'answerButtD') { return question3();  }
 });
-  
-  return question2();
+
 }
 
 function question3(){
@@ -124,14 +119,18 @@ var ans1d = document.getElementById('answerButtD')
 answerButt.addEventListener('click', function() {
                             if (question3() == 'answerButtC') {
   return initialsSave();
-} else { return initialsSave;  }
+} else if (question3() !== 'answerButtC') { return initialsSave();  }
 });
   
 }
 
 function initialsSave(){
-localStorage.setItem("initials", "test")
+    document.getElementById("container").classList.add("hide")
+    document.getElementById("submit").classList.remove("hide");
+    document.getElementById("btnmyNumber").addEventListener('click', saveInitials)
+var saveInitials = localStorage.setItem("btnmyNumber")
 }
+
 
 
 

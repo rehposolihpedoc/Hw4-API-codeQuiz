@@ -32,7 +32,11 @@ THEN I can save my initials and my score
     <h1>CODE QUIZ COUNTDOWN</h1>
   </header>
   <p id="clock"></p>
-  <input id="initials" value="" name=initials class="initials"/>
+  <form onsubmit="return false;" class="hide" id="submit" >
+    <input  value="" placeholder="Enter initials!" name=initials class="hide"/>
+    <input class="button button3 " type="" id="initials" value="" min="0" max="100" placeholder="Enter initials!">
+    <input type="submit" id="btnmyNumber">
+    </form>
   <section id="container" class="hide">
     <div id="questionsMain">
       <div id="question">Which is an example of a method?</div>
