@@ -4,11 +4,11 @@
 
 - 🔭 I’m currently working on 
 
-- Link to wesite: 
+- Link to wesite: https://rehposolihpedoc.github.io/Hw4-API-codeQuiz/
 
 - 🌱 I’m currently learning **html, CSS, JSON, & JS**
 
-- 👨‍💻 All of my projects are available at 
+- 👨‍💻 All of my projects are available at https://github.com/rehposolihpedoc
 
 # <Challenge 4>
 ## ------------------------------Description-------------------------------
